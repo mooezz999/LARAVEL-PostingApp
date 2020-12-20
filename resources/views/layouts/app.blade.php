@@ -23,14 +23,21 @@
   <div class="container-fluid">
  
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="/">Home</a></li>
       <li><a href="{{route('dashboard')}}">Dashboard</a></li>
       <li><a href="#">Post</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
    @auth
    <li><a href="#"><span class="glyphicon glyphicon-user"></span>moo</a></li>
-   <li><a href="#"><span class="glyphicon glyphicon-user"></span>Logout</a></li>
+   <li>
+   <form action="{{route('logout')}}" method="post">
+   @csrf
+   <button type="submit">
+   <span class="glyphicon glyphicon-user"></span>Logout
+   </button>
+   </form>
+   </li>
 @endauth
 
 @guest
