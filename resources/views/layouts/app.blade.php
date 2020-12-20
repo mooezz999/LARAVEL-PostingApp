@@ -29,7 +29,7 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
    @auth
-   <li><a href="#"><span class="glyphicon glyphicon-user"></span>moo</a></li>
+   <li><a href="#"><span class="glyphicon glyphicon-user"></span>{{auth()->user()->name}}</a></li>
    <li>
    <form action="{{route('logout')}}" method="post">
    @csrf

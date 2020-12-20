@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Hash;
 class RegisterController extends Controller
 {
     //
+
+    public function __construct(){
+        $this->middleware(['guest']);
+    }
 function index(){
     return view('auth.register');
 }
@@ -32,7 +36,9 @@ function store(Request $request){
 
 
  auth()->attempt($request->only('email','password'));
- 
+
  return redirect()->route('dashboard');
+
 }
+
 }
