@@ -34,7 +34,7 @@
 @endauth
 
 @guest
-<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+<li><a href="{{route('login')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       <li><a href="{{route('register')}}"><span></span>Register</a></li>
 @endguest
 
