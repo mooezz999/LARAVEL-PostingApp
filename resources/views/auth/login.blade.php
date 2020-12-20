@@ -28,6 +28,10 @@
     <div class="alert alert-danger">{{ $message }}</div>
 @enderror
 
+    <input type="checkbox" name="remember" id="remember" class="@error('password') is-invalid @enderror" >
+    <label for="remember"><b>Remember me</b></label>
+
+
 <b>&nbsp</b> <b>&nbsp</b>
     <button type="submit">Login</button>
 
