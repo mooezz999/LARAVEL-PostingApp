@@ -6,7 +6,7 @@
 
 <div class="flex justify-center">
 <dic class="w-8/12 bg-white p-6 rounded-lg">
-Posts
+Dashboard
 
 
 </div>
