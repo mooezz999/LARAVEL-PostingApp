@@ -4,6 +4,8 @@
 
 @section('content')
 
+@auth 
+
 <form action="{{route('posts')}}" method="post">
 @csrf
   
@@ -20,6 +22,8 @@
 @enderror
  <button type="submit">Post</button>
 </form>
+
+@endauth
 <br><br>
 @if ($posts->count())
 
