@@ -20,7 +20,9 @@
     <label for="uname"><b>Email address</b></label>
     @error('email')
     <div class="alert alert-danger">{{ $message }}</div>
-@enderror<input type="text" placeholder="Enter Email address" name="email" class="@error('email') is-invalid @enderror"  value="{{old('email')}}"><br><br>
+@enderror
+
+<input type="text" placeholder="Enter Email address" name="email" class="@error('email') is-invalid @enderror"  value="{{old('email')}}"><br><br>
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" class="@error('password') is-invalid @enderror" >
