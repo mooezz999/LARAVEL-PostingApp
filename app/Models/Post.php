@@ -20,4 +20,6 @@ return $this->likes->contains('user_id',$user->id);
     public function likes(){
         return $this->hasMany(Like::class);
     }
+
+ 
 }
