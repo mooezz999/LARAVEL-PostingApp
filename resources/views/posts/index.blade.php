@@ -26,6 +26,20 @@
 @foreach($posts as $post)
 <a href="">{{$post->user->name}} </a><span>{{$post->created_at->diffForHumans()}}</span>
 <p>{{$post->body}}</p>
+<br><br>
+@if(!$post->likedBy(auth()->user()))
+<form action="{{route('posts.likes',$post)}}" method="post" >
+@csrf
+<button type="submit">Like</button>
+</form>
+@else
+<form action="{{route('posts.likes',$post)}}" method="post" >
+@csrf
+@method('DELETE')
+<button type="submit">Unlike</button>
+</form>
+@endif
+<span>{{$post->likes->count()}} {{Str::plural('like',$post->likes->count())}}</span>
 @endforeach
 
 {{$posts->links()}}
