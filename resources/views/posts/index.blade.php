@@ -27,6 +27,8 @@
 <a href="">{{$post->user->name}} </a><span>{{$post->created_at->diffForHumans()}}</span>
 <p>{{$post->body}}</p>
 @endforeach
+
+{{$posts->links()}}
 @else
 
 <p>no posts</p>
